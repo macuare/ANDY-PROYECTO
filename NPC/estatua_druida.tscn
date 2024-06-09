@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpsfxydbqv4m4"]
+
+[ext_resource type="PackedScene" uid="uid://ctpy6iga7eg2e" path="res://estatua_plantilla.tscn" id="1_b8417"]
+[ext_resource type="Texture2D" uid="uid://d4a0lu7uubjv5" path="res://NPC/Estatuas/estatuaDruida.png" id="2_0ys8d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y8nss"]
+radius = 112.0
+height = 338.0
+
+[node name="EstatuaDruida" instance=ExtResource("1_b8417")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_0ys8d")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(70, 169)
+shape = SubResource("CapsuleShape2D_y8nss")

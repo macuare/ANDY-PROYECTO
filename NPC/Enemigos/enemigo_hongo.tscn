@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3 uid="uid://c8xltded4g5dh"]
+
+[ext_resource type="PackedScene" uid="uid://03a23xe71x2f" path="res://enemigo_plantilla.tscn" id="1_lsfhc"]
+[ext_resource type="Texture2D" uid="uid://dd7yds1uf5hbo" path="res://NPC/Enemigos/Hongo/Hongo1_S.png" id="2_54p4s"]
+[ext_resource type="Texture2D" uid="uid://bytevua80kip7" path="res://NPC/Enemigos/Hongo/Hongo1_E.png" id="3_vvug5"]
+[ext_resource type="Texture2D" uid="uid://d1ajmtciaq12u" path="res://NPC/Enemigos/Hongo/Hongo1_N.png" id="4_ps6pe"]
+[ext_resource type="Texture2D" uid="uid://q8sbm4slj61d" path="res://NPC/Enemigos/Hongo/Hongo1_NE.png" id="5_p8pmx"]
+[ext_resource type="Texture2D" uid="uid://c1dmnfuxq4bey" path="res://NPC/Enemigos/Hongo/Hongo1_NO.png" id="6_uajxs"]
+[ext_resource type="Texture2D" uid="uid://blpetsnggonsc" path="res://NPC/Enemigos/Hongo/Hongo1_O.png" id="7_1lenb"]
+[ext_resource type="Texture2D" uid="uid://3xkykf8sy758" path="res://NPC/Enemigos/Hongo/Hongo1_SE.png" id="8_qx6fq"]
+[ext_resource type="Texture2D" uid="uid://bxjgtah5y8hid" path="res://NPC/Enemigos/Hongo/Hongo1_SO.png" id="9_joy1t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l1o7x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_54p4s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vvug5")
+}],
+"loop": true,
+"name": &"mov_E",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ps6pe")
+}],
+"loop": true,
+"name": &"mov_N",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p8pmx")
+}],
+"loop": true,
+"name": &"mov_NE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_uajxs")
+}],
+"loop": true,
+"name": &"mov_NO",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1lenb")
+}],
+"loop": true,
+"name": &"mov_O",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_54p4s")
+}],
+"loop": true,
+"name": &"mov_S",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_qx6fq")
+}],
+"loop": true,
+"name": &"mov_SE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_joy1t")
+}],
+"loop": true,
+"name": &"mov_SO",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jriyv"]
+radius = 81.0
+height = 178.0
+
+[node name="EnemigoHongo" instance=ExtResource("1_lsfhc")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_l1o7x")
+animation = &"default"
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_jriyv")

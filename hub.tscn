@@ -1,0 +1,123 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxqka34a6fq6d"]
+
+[ext_resource type="Texture2D" uid="uid://675c3lxco4vr" path="res://Jugador/warriorFace.jpg" id="1_0vwxb"]
+[ext_resource type="Texture2D" uid="uid://bdgpyxfsxkm3j" path="res://barraProgreso/barra_progreso_base.png" id="2_jgbwm"]
+[ext_resource type="Texture2D" uid="uid://bg6xxooybn7kq" path="res://barraProgreso/barra_progreso_barra.png" id="3_cq8fw"]
+[ext_resource type="Texture2D" uid="uid://dkh8eyxupbo4" path="res://Simbolos/simbolo1.png" id="4_qp5qk"]
+[ext_resource type="Texture2D" uid="uid://6jgrufkxdw4w" path="res://Simbolos/simbolo2.png" id="5_t88sk"]
+[ext_resource type="Texture2D" uid="uid://bbqxji0ecc5dh" path="res://Simbolos/simbolo3.png" id="6_f5tm7"]
+[ext_resource type="Texture2D" uid="uid://b4ayc2iunxw4t" path="res://Simbolos/simbolo4.png" id="7_3he3p"]
+[ext_resource type="Texture2D" uid="uid://qkb7v3ao04eq" path="res://Simbolos/simbolo5.png" id="8_4l75j"]
+
+[node name="HUB" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FotoJugador" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.486946, 0.497307)
+texture = ExtResource("1_0vwxb")
+
+[node name="VidaProgeso" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 87.0
+offset_right = 654.0
+offset_bottom = 181.0
+scale = Vector2(0.206975, 0.24806)
+value = 100.0
+texture_over = ExtResource("2_jgbwm")
+texture_progress = ExtResource("3_cq8fw")
+
+[node name="Poder1" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1166.0
+offset_top = -78.9999
+offset_right = -1113.0
+offset_bottom = -16.9999
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.80724, 1.38615)
+texture = ExtResource("4_qp5qk")
+expand_mode = 1
+
+[node name="Poder2" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1105.0
+offset_top = -83.9999
+offset_right = -1049.0
+offset_bottom = -31.9999
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.79527, 1.79899)
+texture = ExtResource("5_t88sk")
+expand_mode = 1
+
+[node name="Poder3" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1039.0
+offset_top = -79.9999
+offset_right = -974.0
+offset_bottom = -28.9999
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.48828, 1.73037)
+texture = ExtResource("6_f5tm7")
+expand_mode = 1
+
+[node name="Poder4" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -975.0
+offset_top = -80.0
+offset_right = -916.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.5883, 1.5)
+texture = ExtResource("7_3he3p")
+expand_mode = 1
+
+[node name="Poder5" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -912.0
+offset_top = -79.0
+offset_right = -853.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.46159, 1.42286)
+texture = ExtResource("8_4l75j")
+expand_mode = 1

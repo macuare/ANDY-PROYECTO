@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmlxaq0wutgmc"]
+
+[ext_resource type="PackedScene" uid="uid://ctpy6iga7eg2e" path="res://estatua_plantilla.tscn" id="1_1gbqa"]
+[ext_resource type="Texture2D" uid="uid://b8mffovc0kli5" path="res://NPC/Estatuas/estatuaHada.png" id="2_guxal"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y3aib"]
+radius = 115.0
+height = 286.0
+
+[node name="EstatuaHada" instance=ExtResource("1_1gbqa")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_guxal")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-44, 165)
+shape = SubResource("CapsuleShape2D_y3aib")

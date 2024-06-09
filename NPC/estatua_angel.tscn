@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0xkqvkan5l6i"]
+
+[ext_resource type="PackedScene" uid="uid://ctpy6iga7eg2e" path="res://estatua_plantilla.tscn" id="1_ud4qw"]
+[ext_resource type="Texture2D" uid="uid://don57rb27ot54" path="res://NPC/Estatuas/estatuaAngel.png" id="2_oxlbc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2mk7"]
+radius = 100.0
+height = 326.0
+
+[node name="EstatuaAngel" instance=ExtResource("1_ud4qw")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_oxlbc")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-71, 208)
+shape = SubResource("CapsuleShape2D_i2mk7")

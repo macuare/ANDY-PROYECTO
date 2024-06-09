@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5m2bpkttivb1"]
+
+[ext_resource type="PackedScene" uid="uid://clx110pre6gv4" path="res://ArbolTemplate.tscn" id="1_yuvph"]
+[ext_resource type="Texture2D" uid="uid://dtwyrir6t0xp7" path="res://Terrenos/Arboles/arbol1.png" id="2_cx2sy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xgs2i"]
+radius = 36.2215
+
+[node name="Arbol1" instance=ExtResource("1_yuvph")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-2.5, 2)
+scale = Vector2(0.979167, 0.983333)
+texture = ExtResource("2_cx2sy")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-2, 69)
+shape = SubResource("CircleShape2D_xgs2i")

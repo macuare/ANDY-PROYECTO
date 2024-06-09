@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgto75mruepl8"]
+
+[ext_resource type="PackedScene" uid="uid://ctpy6iga7eg2e" path="res://estatua_plantilla.tscn" id="1_t83ix"]
+[ext_resource type="Texture2D" uid="uid://pjtfu2tb82qu" path="res://NPC/Estatuas/estatuaEspia.png" id="2_n0bx3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ittmt"]
+radius = 128.0
+height = 372.0
+
+[node name="EstatuaEspia" instance=ExtResource("1_t83ix")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_n0bx3")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-19, 103)
+shape = SubResource("CapsuleShape2D_ittmt")

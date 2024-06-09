@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://cta6trxyl73sb"]
+
+[ext_resource type="Texture2D" uid="uid://crx5mxpp6o5ei" path="res://Botones/botonTexturizado1.png" id="1_0ae2s"]
+[ext_resource type="Script" path="res://interface.gd" id="1_ycocb"]
+[ext_resource type="Texture2D" uid="uid://c2s33qpjnekw0" path="res://Botones/botonTexturizado1C.png" id="2_5gajo"]
+[ext_resource type="VideoStream" path="res://Video/Wallpaper_Animación_Juego_Andy (1).ogv" id="2_uhge5"]
+[ext_resource type="Texture2D" uid="uid://li2b48jixdah" path="res://Botones/botonTexturizado1B.png" id="3_lovyt"]
+[ext_resource type="Texture2D" uid="uid://dkygn7xfgmcot" path="res://Botones/botonTexturizado1D.png" id="4_ssxxx"]
+[ext_resource type="Texture2D" uid="uid://ct8drupk7bna7" path="res://Botones/botonTexturizado1E.png" id="5_uyf6s"]
+[ext_resource type="AudioStream" uid="uid://dmbmrky2hvnv3" path="res://Musica/ytmp3free.cc_demon-slayer-ost-kamado-tanjiro-no-uta-kimetsu-no-yaiba-live-orchestra-2021-youtubemp3free.org.mp3" id="8_dycj8"]
+[ext_resource type="AudioStream" uid="uid://b3m34jdei6am1" path="res://Musica/click.wav" id="9_gtyi0"]
+
+[sub_resource type="SystemFont" id="SystemFont_hejc8"]
+font_names = PackedStringArray("Broadway")
+font_weight = 999
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjqsb"]
+font = SubResource("SystemFont_hejc8")
+font_size = 50
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ycocb")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.10352e-05
+offset_right = 768.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.683545, 0.604018)
+stream = ExtResource("2_uhge5")
+autoplay = true
+loop = true
+
+[node name="BotonPlay" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -417.0
+offset_top = -240.0
+offset_right = 152.0
+offset_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+action_mode = 0
+texture_normal = ExtResource("1_0ae2s")
+texture_pressed = ExtResource("2_5gajo")
+texture_hover = ExtResource("3_lovyt")
+texture_disabled = ExtResource("4_ssxxx")
+texture_focused = ExtResource("5_uyf6s")
+ignore_texture_size = true
+
+[node name="Titulo" type="Label" parent="BotonPlay"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.501
+anchor_bottom = 1.0
+offset_left = -86.5
+offset_top = -142.0
+offset_right = 86.931
+grow_horizontal = 2
+grow_vertical = 0
+text = "ENTRAR"
+label_settings = SubResource("LabelSettings_pjqsb")
+horizontal_alignment = 1
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_dycj8")
+autoplay = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_gtyi0")
+
+[connection signal="button_down" from="BotonPlay" to="." method="_on_boton_play_button_down"]
+[connection signal="mouse_entered" from="BotonPlay" to="." method="_on_boton_play_mouse_entered"]

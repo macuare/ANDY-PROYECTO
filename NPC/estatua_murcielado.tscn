@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://5nbg352an6tw"]
+
+[ext_resource type="PackedScene" uid="uid://ctpy6iga7eg2e" path="res://estatua_plantilla.tscn" id="1_es1y1"]
+[ext_resource type="Texture2D" uid="uid://dvoedp83sfvtx" path="res://NPC/Estatuas/statuaMurcielago.png" id="2_hn4iw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4j26"]
+radius = 99.0
+height = 312.0
+
+[node name="EstatuaMurcielado" instance=ExtResource("1_es1y1")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_hn4iw")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-37, 192)
+shape = SubResource("CapsuleShape2D_n4j26")
