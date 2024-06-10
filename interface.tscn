@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cta6trxyl73sb"]
+[gd_scene load_steps=13 format=3 uid="uid://cta6trxyl73sb"]
 
 [ext_resource type="Texture2D" uid="uid://crx5mxpp6o5ei" path="res://Botones/botonTexturizado1.png" id="1_0ae2s"]
 [ext_resource type="Script" path="res://interface.gd" id="1_ycocb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ct8drupk7bna7" path="res://Botones/botonTexturizado1E.png" id="5_uyf6s"]
 [ext_resource type="AudioStream" uid="uid://dmbmrky2hvnv3" path="res://Musica/ytmp3free.cc_demon-slayer-ost-kamado-tanjiro-no-uta-kimetsu-no-yaiba-live-orchestra-2021-youtubemp3free.org.mp3" id="8_dycj8"]
 [ext_resource type="AudioStream" uid="uid://b3m34jdei6am1" path="res://Musica/click.wav" id="9_gtyi0"]
+[ext_resource type="Texture2D" uid="uid://b024tvh6051uf" path="res://andyAventurero.png" id="10_w0fbt"]
 
 [sub_resource type="SystemFont" id="SystemFont_hejc8"]
 font_names = PackedStringArray("Broadway")
@@ -43,6 +44,18 @@ scale = Vector2(0.683545, 0.604018)
 stream = ExtResource("2_uhge5")
 autoplay = true
 loop = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -497.0
+offset_top = 227.0
+offset_right = -75.0
+offset_bottom = 465.0
+grow_horizontal = 0
+texture = ExtResource("10_w0fbt")
 
 [node name="BotonPlay" type="TextureButton" parent="."]
 layout_mode = 1
