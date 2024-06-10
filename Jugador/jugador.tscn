@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://d36c8ewxubxan"]
+[gd_scene load_steps=55 format=3 uid="uid://d36c8ewxubxan"]
 
 [ext_resource type="Script" path="res://Jugador/jugador.gd" id="1_d81be"]
 [ext_resource type="Texture2D" uid="uid://lnvl22lqjq7f" path="res://Addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Yellow/Warrior_Yellow.png" id="2_moiov"]
 [ext_resource type="AudioStream" uid="uid://de8nfdu1hlbwu" path="res://Musica/ytmp3free.cc_running-sound-effects-shoes-on-road-sound-effects-footsteps-youtubemp3free.org.mp3" id="3_dyxww"]
+[ext_resource type="AudioStream" uid="uid://blltd0ulip61h" path="res://Musica/espadazo.mp3" id="4_w61gp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tiu1"]
 atlas = ExtResource("2_moiov")
@@ -217,7 +218,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rovop")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk1Espalda",
 "speed": 15.0
 }, {
@@ -240,7 +241,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w3f1c")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk1Frontal",
 "speed": 15.0
 }, {
@@ -263,7 +264,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_es3db")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk1Lateral",
 "speed": 15.0
 }, {
@@ -286,7 +287,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nf5n5")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk2Espalda",
 "speed": 15.0
 }, {
@@ -309,7 +310,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jmo5i")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk2Frontal",
 "speed": 15.0
 }, {
@@ -332,7 +333,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0s7ck")
 }],
-"loop": true,
+"loop": false,
 "name": &"atk2Lateral",
 "speed": 15.0
 }, {
@@ -355,7 +356,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4bhsa")
 }],
-"loop": true,
+"loop": false,
 "name": &"caminar",
 "speed": 15.0
 }, {
@@ -378,7 +379,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3o28u")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 15.0
 }]
@@ -395,8 +396,9 @@ velocidad = 300.0
 position = Vector2(-7.62939e-06, -7)
 scale = Vector2(0.804451, 0.804744)
 sprite_frames = SubResource("SpriteFrames_wkjl4")
-animation = &"atk1Espalda"
-frame_progress = 0.591351
+animation = &"atk1Lateral"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1)
@@ -412,3 +414,6 @@ texture = ExtResource("2_moiov")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dyxww")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_w61gp")
