@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://lo2d22bt4hhe"]
+
+[ext_resource type="Shader" path="res://NubesDinamicas.gdshader" id="1_db0ig"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2nd0a"]
+frequency = 0.0075
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_q4nv7"]
+width = 320
+height = 180
+seamless = true
+seamless_blend_skirt = 0.756
+noise = SubResource("FastNoiseLite_2nd0a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_px4gd"]
+shader = ExtResource("1_db0ig")
+shader_parameter/densidadNiebla = 0.62
+shader_parameter/velocidad = Vector2(0.01, 0.01)
+shader_parameter/ruidoTextura = SubResource("NoiseTexture2D_q4nv7")
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+layer = 10
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(160, 90)
+
+[node name="ColorRect" type="ColorRect" parent="ParallaxLayer"]
+material = SubResource("ShaderMaterial_px4gd")
+offset_right = 160.0
+offset_bottom = 90.0

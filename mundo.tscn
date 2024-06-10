@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://d17frgma7fk3p"]
+[gd_scene load_steps=102 format=3 uid="uid://d17frgma7fk3p"]
 
 [ext_resource type="PackedScene" uid="uid://cxqka34a6fq6d" path="res://hub.tscn" id="1_ln8di"]
 [ext_resource type="Script" path="res://mundo.gd" id="1_npy65"]
@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://c0xkqvkan5l6i" path="res://NPC/estatua_angel.tscn" id="49_mladd"]
 [ext_resource type="PackedScene" uid="uid://bgto75mruepl8" path="res://NPC/estatua_espia.tscn" id="50_8h03j"]
 [ext_resource type="AudioStream" uid="uid://c7d0ta72wy6jl" path="res://Musica/ytmp3free.cc_epic-motivational-music-born-a-legend-youtubemp3free.org.mp3" id="56_62e0r"]
+[ext_resource type="PackedScene" uid="uid://lo2d22bt4hhe" path="res://NubesDinamicas.tscn" id="58_odvcw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvbie"]
 texture = ExtResource("1_vxnuh")
@@ -753,5 +754,10 @@ texture = ExtResource("32_uuqji")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("56_62e0r")
 autoplay = true
+
+[node name="NubesDinamicas" parent="." instance=ExtResource("58_odvcw")]
+offset = Vector2(-1000, -500)
+scale = Vector2(30, 25)
+transform = Transform2D(30, 0, 0, 25, -1000, -500)
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

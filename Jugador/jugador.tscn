@@ -408,10 +408,6 @@ shape = SubResource("CapsuleShape2D_x8v4d")
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
-[node name="WarriorYellow" type="Sprite2D" parent="."]
-position = Vector2(2034, -26)
-texture = ExtResource("2_moiov")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dyxww")
 
